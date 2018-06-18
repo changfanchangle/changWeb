@@ -1,0 +1,31 @@
+debug: false
+spring:
+  profiles:
+#    # 设置起作用的application文件
+#    active: prod
+server:
+  port: 9999
+
+# mysql 的数据库配置
+spring:
+  datasource:
+    # 数据库驱动
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.96.101.146:3308/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: changfan
+    password: fanfan12
+    initialSize: 1
+    maxActive: 20
+    minIdle: 3
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+
+
+
